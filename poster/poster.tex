@@ -183,7 +183,7 @@ The marginal probability when $S > 0$ is not available in closed-form, and we di
 
   \begin{alertblock}{Adaptive truncation}
   Let $p(j) := \pr\left(\boldsymbol{\theta} \mid \boldsymbol{Y}, X = j \right)$ let $Q = \sum_{j=s}^\infty p(j)$ be the sum of interest, with $\epsilon$ the desired approximation error.
-  Define $L := \lim_{n \to \infty} p(n)$.
+  Define $L := \lim_{n \to \infty} \frac{p(n + 1)}{p(n)}$.
   The algorithm can be summarised as follows:
   \begin{enumerate}
   \item Find $\dot{N}$ such that $p(j + 1)/p(j) < 1$ for all $j > \dot{N}$;
